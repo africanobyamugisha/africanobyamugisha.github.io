@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Africano Byamugisha — Data Analytics & AI Consultant</title>
+    <title>Africano Byamugisha — Data Analytics & AI Expert</title>
     <meta name="description" content="
-   Data Analytics & Business Process Optimization Consultant with expertise in Data Operations,
+   Data Analytics & Business Process Optimization Expert with expertise in Data Operations,
    Monitoring, Evaluation & Learning (MEL) real-time systems, Management Information Systems (MIS),
    Commercial Analytics, Market Research, and Statistical Computing.
    ">
@@ -26,86 +26,143 @@
     <link rel="stylesheet" href="assets/css/spacing.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Centered layout overrides */
-        .profile-wrapper {
+        /* Hero section */
+        .hero-section {
+            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 40%, #ede9fe 100%);
+            min-height: calc(100vh - 50px);
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+        }
+        .hero-row {
+            display: flex;
+            align-items: center;
+        }
+        /* Left content */
+        .hero-heading {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+        .hero-heading .accent {
+            color: #6c5ce7;
+        }
+        .hero-desc {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #555;
+            margin-bottom: 28px;
+            max-width: 500px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-hero {
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-hero:hover {
+            transform: translateY(-2px);
+        }
+        .btn-filled {
+            background: #6c5ce7;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+        }
+        .btn-filled:hover {
+            background: #5a4bd1;
+            color: #fff;
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+        }
+        .btn-outline {
+            background: #fff;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        .btn-outline:hover {
+            border-color: #6c5ce7;
+            color: #6c5ce7;
+        }
+        /* Photo side */
+        .photo-col {
             position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .profile-wrapper .slider-title {
-            font-size: 2.8rem;
-        }
-        .profile-wrapper .description,
-        .profile-wrapper p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-        }
-        .profile-wrapper .inner-btn {
+            display: flex;
             justify-content: center;
+            align-items: center;
         }
-        .svg-backdrop {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 110%;
-            max-width: 750px;
-            opacity: 0.12;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .profile-content {
+        .photo-wrapper {
             position: relative;
-            z-index: 1;
+            display: inline-block;
         }
-        @media (max-width: 768px) {
-            .profile-wrapper .slider-title { font-size: 2rem; }
-            .profile-wrapper .description,
-            .profile-wrapper p { font-size: 1.05rem; }
-            .svg-backdrop { width: 130%; }
+        .photo-wrapper img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            object-fit: cover;
         }
-
-        /* SVG animations */
-        @keyframes float {
+        /* Floating badges */
+        .floating-badge {
+            position: absolute;
+            background: #fff;
+            padding: 10px 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #333;
+            white-space: nowrap;
+            z-index: 2;
+            animation: badgeFloat 4s ease-in-out infinite;
+        }
+        .floating-badge .badge-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .badge-teal { background: #e0f7f5; color: #14b8a6; }
+        .badge-purple { background: #ede9fe; color: #6c5ce7; }
+        .badge-amber { background: #fef3c7; color: #d97706; }
+        .badge-1 { top: 12%; right: -30px; animation-delay: 0s; }
+        .badge-2 { top: 45%; right: -50px; animation-delay: 1.2s; }
+        .badge-3 { bottom: 15%; right: -35px; animation-delay: 0.6s; }
+        @keyframes badgeFloat {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
         }
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        /* Responsive */
+        @media (max-width: 991px) {
+            .hero-heading { font-size: 2.4rem; }
+            .photo-wrapper img { max-width: 340px; }
+            .floating-badge { display: none; }
         }
-        @keyframes pulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.9; }
+        @media (max-width: 768px) {
+            .hero-section { padding: 40px 0; min-height: auto; }
+            .hero-heading { font-size: 2rem; }
+            .hero-desc { font-size: 0.95rem; }
+            .photo-col { margin-bottom: 30px; }
+            .hero-buttons { justify-content: center; }
+            .hero-row { text-align: center; }
+            .hero-desc { margin-left: auto; margin-right: auto; }
         }
-        @keyframes drawLine {
-            from { stroke-dashoffset: 600; }
-            to { stroke-dashoffset: 0; }
-        }
-        @keyframes barGrow {
-            from { transform: scaleY(0); }
-            to { transform: scaleY(1); }
-        }
-        .node-main { animation: float 6s ease-in-out infinite; }
-        .node-1 { animation: floatSlow 7s ease-in-out 0.5s infinite; }
-        .node-2 { animation: float 8s ease-in-out 1s infinite; }
-        .node-3 { animation: floatSlow 6s ease-in-out 1.5s infinite; }
-        .node-4 { animation: float 7s ease-in-out 0.3s infinite; }
-        .node-5 { animation: floatSlow 9s ease-in-out 0.8s infinite; }
-        .dot-pulse { animation: pulse 3s ease-in-out infinite; }
-        .dot-pulse-2 { animation: pulse 4s ease-in-out 1s infinite; }
-        .dot-pulse-3 { animation: pulse 3.5s ease-in-out 0.5s infinite; }
-        .trend-line {
-            stroke-dasharray: 600;
-            stroke-dashoffset: 600;
-            animation: drawLine 2s ease-out 0.5s forwards;
-        }
-        .bar-animate { transform-origin: center bottom; animation: barGrow 0.8s ease-out both; }
-        .bar-1 { animation-delay: 0.8s; }
-        .bar-2 { animation-delay: 1.0s; }
-        .bar-3 { animation-delay: 1.2s; }
-        .bar-4 { animation-delay: 1.4s; }
     </style>
 </head>
 
@@ -163,149 +220,49 @@
     </header>
 
     <main>
-        <section style="padding-top:30px; padding-bottom: 30px;" class="error-section hero-slider one"
->
-            <div class="container slide-bg swiper swiper-container swiper-container-fade">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="auto-container">
-                            <div class="profile-wrapper">
-                                <!-- SVG background overlay -->
-                                <svg class="svg-backdrop" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <defs>
-                                        <radialGradient id="bgGlow" cx="50%" cy="45%" r="50%">
-                                            <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.12"/>
-                                            <stop offset="70%" stop-color="#14b8a6" stop-opacity="0.02"/>
-                                            <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
-                                        </radialGradient>
-                                        <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#14b8a6"/>
-                                            <stop offset="100%" stop-color="#0d9488"/>
-                                        </linearGradient>
-                                        <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#f59e0b"/>
-                                            <stop offset="100%" stop-color="#d97706"/>
-                                        </linearGradient>
-                                        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.5"/>
-                                            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
-                                        </linearGradient>
-                                        <filter id="glow">
-                                            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-                                            <feMerge>
-                                                <feMergeNode in="coloredBlur"/>
-                                                <feMergeNode in="SourceGraphic"/>
-                                            </feMerge>
-                                        </filter>
-                                    </defs>
-                                    <circle cx="250" cy="180" r="200" fill="url(#bgGlow)"/>
-                                    <g opacity="0.3" stroke="#14b8a6" stroke-linecap="round">
-                                        <line x1="250" y1="170" x2="120" y2="100" stroke-width="1"/>
-                                        <line x1="250" y1="170" x2="380" y2="90" stroke-width="1"/>
-                                        <line x1="250" y1="170" x2="95" y2="250" stroke-width="1"/>
-                                        <line x1="250" y1="170" x2="360" y2="240" stroke-width="1"/>
-                                        <line x1="250" y1="170" x2="180" y2="50" stroke-width="1"/>
-                                        <line x1="120" y1="100" x2="180" y2="50" stroke-width="0.7"/>
-                                        <line x1="380" y1="90" x2="360" y2="240" stroke-width="0.7"/>
-                                        <line x1="95" y1="250" x2="120" y2="100" stroke-width="0.5" stroke-dasharray="4 6"/>
-                                        <line x1="180" y1="50" x2="380" y2="90" stroke-width="0.5" stroke-dasharray="4 6"/>
-                                    </g>
-                                    <path class="trend-line" d="M 40 310 C 100 290, 140 320, 190 300 S 260 240, 310 260 S 380 200, 460 230" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
-                                    <g>
-                                        <rect class="bar-animate bar-1" x="355" y="290" width="18" height="55" rx="4" fill="#14b8a6" opacity="0.45"/>
-                                        <rect class="bar-animate bar-2" x="381" y="265" width="18" height="80" rx="4" fill="#14b8a6" opacity="0.6"/>
-                                        <rect class="bar-animate bar-3" x="407" y="245" width="18" height="100" rx="4" fill="#14b8a6" opacity="0.75"/>
-                                        <rect class="bar-animate bar-4" x="433" y="275" width="18" height="70" rx="4" fill="url(#amberGrad)" opacity="0.65"/>
-                                    </g>
-                                    <g filter="url(#glow)">
-                                        <g class="node-main"><circle cx="250" cy="170" r="22" fill="url(#tealGrad)" opacity="0.85"/><circle cx="250" cy="170" r="9" fill="#0c1222" opacity="0.6"/><circle cx="250" cy="170" r="4" fill="#14b8a6"/></g>
-                                        <g class="node-1"><circle cx="120" cy="100" r="13" fill="url(#amberGrad)" opacity="0.75"/><circle cx="120" cy="100" r="5" fill="#0c1222" opacity="0.5"/></g>
-                                        <g class="node-2"><circle cx="380" cy="90" r="15" fill="url(#tealGrad)" opacity="0.7"/><circle cx="380" cy="90" r="6" fill="#0c1222" opacity="0.5"/></g>
-                                        <g class="node-3"><circle cx="95" cy="250" r="10" fill="url(#tealGrad)" opacity="0.6"/></g>
-                                        <g class="node-4"><circle cx="360" cy="240" r="16" fill="url(#amberGrad)" opacity="0.55"/><circle cx="360" cy="240" r="6" fill="#0c1222" opacity="0.5"/></g>
-                                        <g class="node-5"><circle cx="180" cy="50" r="9" fill="url(#tealGrad)" opacity="0.8"/></g>
-                                    </g>
-                                    <circle class="dot-pulse" cx="200" cy="305" r="2.5" fill="#14b8a6"/>
-                                    <circle class="dot-pulse-2" cx="430" cy="155" r="2" fill="#f59e0b"/>
-                                    <circle class="dot-pulse-3" cx="65" cy="170" r="2" fill="#14b8a6"/>
-                                    <circle class="dot-pulse" cx="310" cy="45" r="2" fill="#f59e0b"/>
-                                    <circle class="dot-pulse-2" cx="460" cy="310" r="1.5" fill="#14b8a6"/>
-                                    <circle class="dot-pulse-3" cx="155" cy="195" r="1.5" fill="#14b8a6"/>
-                                    <circle class="dot-pulse" cx="300" cy="330" r="2" fill="#f59e0b"/>
-                                    <circle class="dot-pulse-2" cx="50" cy="75" r="1.5" fill="#14b8a6"/>
-                                    <circle cx="250" cy="170" r="36" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15" stroke-dasharray="3 5"/>
-                                    <circle cx="250" cy="170" r="52" fill="none" stroke="#14b8a6" stroke-width="0.3" opacity="0.08" stroke-dasharray="2 8"/>
-                                </svg>
+        <section class="hero-section">
+            <div class="container">
+                <div class="row hero-row align-items-center">
+                    <div class="col-lg-6 col-12">
+                        <h1 class="hero-heading">
+                            Africano <span class="accent">Byamugisha</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Data Analytics & Business Process Optimization Expert with expertise in
+                            Data Operations, Monitoring, Evaluation & Learning (MEL) real-time systems,
+                            MIS, Commercial Analytics, Market Research, and Statistical Computing.
+                            Passionate about leveraging data analytics & technology for inclusion and sustainable impact.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="https://www.linkedin.com/in/africanobyamugisha/"
+                               class="btn-hero btn-filled" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://twitter.com/africano1012"
+                               class="btn-hero btn-outline" target="_blank" rel="noopener">
+                                <i class="fa-brands fa-x-twitter"></i> X / Twitter
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 photo-col">
+                        <div class="photo-wrapper">
+                            <img src="assets/img/common/africano_photo.jpg" alt="Africano Byamugisha" class="img-fluid">
 
-                                <!-- Content on top -->
-                                <div class="profile-content">
-                                    <h2 class="slider-title">Africano
-                                        <span class="theme-color">Byamugisha</span>
-                                    </h2>
-                                    <p class="description">
-                                        Data Analytics & Business Process Optimization Consultant with expertise in
-                                        Data Operations, Monitoring, Evaluation & Learning (MEL) real-time systems,
-                                        Management Information Systems (MIS), Commercial Analytics & Business Process
-                                        Optimization, Market Research, and Statistical Computing.
-                                    </p>
-                                    <p>
-                                        BSc Statistics (Statistical Computing) & MSc Computer Science (Data Science & AI),
-                                        Makerere University. Passionate about leveraging data analytics & technology
-                                        for inclusion and sustainable impact. A versatile team player, excellence driven,
-                                        not just the bare minimum.
-                                    </p>
-                                    <div class="inner-btn" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
-                                        <div>
-                                            <a class="default-btn"
-                                                href="https://www.linkedin.com/in/africanobyamugisha/"
-                                                target="_blank" rel="noopener">
-                                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-                                            </a>
-                                        </div>
-                                        <div>
-                                            <a class="default-btn"
-                                                href="https://twitter.com/africano1012"
-                                                target="_blank" rel="noopener"
-                                                style="background-color: #000;">
-                                                <i class="fa-brands fa-x-twitter"></i> X / Twitter
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="floating-badge badge-1">
+                                <span class="badge-icon badge-teal"><i class="fa-solid fa-chart-line"></i></span>
+                                Data Analytics
+                            </div>
+                            <div class="floating-badge badge-2">
+                                <span class="badge-icon badge-purple"><i class="fa-solid fa-database"></i></span>
+                                MEL Systems
+                            </div>
+                            <div class="floating-badge badge-3">
+                                <span class="badge-icon badge-amber"><i class="fa-solid fa-brain"></i></span>
+                                AI & Data Science
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="shape-image">
-                    <div class="inner-shape-1 poa">
-                        <img class="img-fluid" src="assets/img/icon/01_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-2 poa">
-                        <img class="img-fluid" src="assets/img/icon/02_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-3 poa">
-                        <img class="img-fluid" src="assets/img/icon/03_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-4 poa">
-                        <img class="img-fluid" src="assets/img/icon/04_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-5 poa">
-                        <img class="img-fluid" src="assets/img/icon/04_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-6 poa">
-                        <img class="img-fluid" src="assets/img/icon/06_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-7 poa">
-                        <img class="img-fluid" src="assets/img/icon/07_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-8 poa">
-                        <img class="img-fluid" src="assets/img/icon/08_icon.png" alt="">
-                    </div>
-                    <div class="inner-shape-9 poa">
-                        <img class="img-fluid" src="assets/img/icon/27_icon.png" alt="">
-                    </div>
-                </div>
-
             </div>
         </section>
     </main>
