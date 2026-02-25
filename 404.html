@@ -1,242 +1,246 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Africano Byamugisha — Data Analytics & AI Expert</title>
-    <meta name="description" content="
-   Data Analytics & Business Process Optimization Expert with expertise in Data Operations,
-   Monitoring, Evaluation & Learning (MEL) real-time systems, Management Information Systems (MIS),
-   Commercial Analytics, Market Research, and Statistical Computing.
-   ">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africano Byamugisha — Data Analytics & AI Expert</title>
+    <meta name="description" content="Data Analytics & Business Process Optimization Expert with expertise in Data Operations, MEL Systems, MIS, Commercial Analytics, Market Research, and Statistical Computing.">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/assets/css/meanmenu.css">
-    <link rel="stylesheet" href="/assets/css/animate.css">
-    <link rel="stylesheet" href="/assets/css/swiper-bundle.css">
-    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
     <link rel="stylesheet" href="/assets/css/font-awesome-pro.css">
-    <link rel="stylesheet" href="/assets/css/spacing.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        .hero-section {
-            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 40%, #ede9fe 100%);
-            min-height: calc(100vh - 50px);
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(160deg, #f5f7ff 0%, #e8ecff 35%, #f0ebff 65%, #eef5ff 100%);
+            color: #1a1a2e;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .top-bar {
+            background: #1a1a2e;
+            padding: 10px 0;
+            font-size: 0.82rem;
+            color: #ccc;
+        }
+        .top-bar a { color: #ccc; text-decoration: none; transition: color 0.2s; }
+        .top-bar a:hover { color: #fff; }
+        .top-bar .items { display: flex; align-items: center; gap: 24px; }
+        .top-bar .items i { color: #6c5ce7; margin-right: 6px; }
+        .top-bar .socials { display: flex; gap: 16px; justify-content: flex-end; }
+        .top-bar .socials a { font-size: 1rem; }
+
+        .hero {
+            min-height: calc(100vh - 42px);
             display: flex;
             align-items: center;
             padding: 60px 0;
         }
-        .hero-row { display: flex; align-items: center; }
+
         .hero-heading {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.15;
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.12;
             color: #1a1a2e;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+            letter-spacing: -0.02em;
         }
         .hero-heading .accent { color: #6c5ce7; }
+
         .hero-desc {
-            font-size: 1.05rem;
-            line-height: 1.75;
-            color: #555;
-            margin-bottom: 28px;
-            max-width: 500px;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 32px;
+            max-width: 480px;
+            font-weight: 400;
         }
+
         .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
         .btn-hero {
-            padding: 14px 30px;
-            border-radius: 30px;
-            font-size: 0.95rem;
+            padding: 15px 32px;
+            border-radius: 50px;
+            font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
         }
-        .btn-hero:hover { transform: translateY(-2px); }
+        .btn-hero:hover { transform: translateY(-2px); text-decoration: none; }
+
         .btn-filled {
             background: #6c5ce7;
             color: #fff;
-            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+            box-shadow: 0 4px 18px rgba(108, 92, 231, 0.35);
         }
-        .btn-filled:hover { background: #5a4bd1; color: #fff; box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4); }
-        .btn-outline {
+        .btn-filled:hover { background: #5a4bd1; color: #fff; box-shadow: 0 8px 25px rgba(108, 92, 231, 0.4); }
+
+        .btn-outline-custom {
             background: #fff;
             color: #333;
-            border: 2px solid #ddd;
+            border: 1.5px solid #ddd;
         }
-        .btn-outline:hover { border-color: #6c5ce7; color: #6c5ce7; }
-        .photo-col { position: relative; display: flex; justify-content: center; align-items: center; }
-        .photo-wrapper { position: relative; display: inline-block; }
-        .photo-wrapper img { width: 100%; max-width: 420px; border-radius: 20px; object-fit: cover; }
+        .btn-outline-custom:hover { border-color: #6c5ce7; color: #6c5ce7; }
+
+        .photo-col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .photo-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .photo-wrapper img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 24px;
+            object-fit: cover;
+            box-shadow: 0 20px 60px rgba(108, 92, 231, 0.12);
+        }
+
         .floating-badge {
             position: absolute;
             background: #fff;
             padding: 10px 18px;
             border-radius: 14px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.82rem;
+            font-weight: 600;
             color: #333;
             white-space: nowrap;
             z-index: 2;
             animation: badgeFloat 4s ease-in-out infinite;
         }
-        .floating-badge .badge-icon {
-            width: 32px; height: 32px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 0.85rem; flex-shrink: 0;
+        .badge-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            flex-shrink: 0;
         }
-        .badge-teal { background: #e0f7f5; color: #14b8a6; }
+        .badge-teal { background: #d1fae5; color: #059669; }
         .badge-purple { background: #ede9fe; color: #6c5ce7; }
         .badge-amber { background: #fef3c7; color: #d97706; }
-        .badge-1 { top: 12%; right: -30px; animation-delay: 0s; }
-        .badge-2 { top: 45%; right: -50px; animation-delay: 1.2s; }
-        .badge-3 { bottom: 15%; right: -35px; animation-delay: 0.6s; }
+
+        .badge-1 { top: 10%; right: -35px; animation-delay: 0s; }
+        .badge-2 { top: 45%; right: -55px; animation-delay: 1.3s; }
+        .badge-3 { bottom: 12%; right: -40px; animation-delay: 0.6s; }
+
         @keyframes badgeFloat {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-10px); }
         }
+
         @media (max-width: 991px) {
-            .hero-heading { font-size: 2.4rem; }
-            .photo-wrapper img { max-width: 340px; }
+            .hero-heading { font-size: 2.5rem; }
+            .photo-wrapper img { max-width: 320px; }
             .floating-badge { display: none; }
+            .photo-col { margin-top: 40px; }
         }
         @media (max-width: 768px) {
-            .hero-section { padding: 40px 0; min-height: auto; }
+            .hero { padding: 40px 0; min-height: auto; text-align: center; }
             .hero-heading { font-size: 2rem; }
-            .hero-desc { font-size: 0.95rem; }
-            .photo-col { margin-bottom: 30px; }
+            .hero-desc { font-size: 0.92rem; margin-left: auto; margin-right: auto; }
             .hero-buttons { justify-content: center; }
-            .hero-row { text-align: center; }
-            .hero-desc { margin-left: auto; margin-right: auto; }
+            .photo-wrapper img { max-width: 280px; }
+            .top-bar .items { gap: 14px; font-size: 0.75rem; }
+            .top-bar .row > div:last-child { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hero-heading { font-size: 1.75rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn-hero { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="items">
+                        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:byamugishafricano@gmail.com">byamugishafricano@gmail.com</a></span>
+                        <span><i class="fa-solid fa-phone"></i> +256(0) 706107619</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Kampala, Uganda</span>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="socials">
+                        <a href="https://twitter.com/Africano1012"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/africanobyamugisha/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/africanobyamugisha"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <header class="header-area-2">
-        <div class="header-top d-none d-lg-block">
-            <div class="auto-container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="left-wrapper">
-                            <div class="item">
-                                <span class="theme-color"><i class="fa-solid fa-envelope"></i></span>
-                                <span>
-                                    <a style="color: white;"
-                                        href="mailto:byamugishafricano@gmail.com">byamugishafricano@gmail.com</a>
-                                </span>
-                            </div>
-                            <div class="item">
-                                <span class="theme-color"><i class="fa fa-phone-volume"></i></span>
-                                <span style="color: white;">+256(0) 706107619</span>
-                            </div>
-
-                            <div class="item">
-                                <span class="theme-color"><i class="fa-sharp fa-solid fa-location-dot"></i></span>
-                                <span style="color: white;">Kampala, Uganda</span>
-                            </div>
-                        </div>
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <h1 class="hero-heading">
+                        Africano<br><span class="accent">Byamugisha</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Data Analytics & Business Process Optimization Expert with expertise in
+                        Data Operations, Monitoring, Evaluation & Learning (MEL) real-time systems,
+                        MIS, Commercial Analytics, Market Research, and Statistical Computing.
+                        Passionate about leveraging data analytics & technology for inclusion and sustainable impact.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://www.linkedin.com/in/africanobyamugisha/" class="btn-hero btn-filled" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                        </a>
+                        <a href="https://twitter.com/africano1012" class="btn-hero btn-outline-custom" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-x-twitter"></i> X / Twitter
+                        </a>
                     </div>
-                    <div class="col-lg-5">
-                        <div class="right-wrapper">
-                            <div class="item social">
-                                <a href="https://twitter.com/Africano1012">
-                                    <i class="fa-brands fa-x-twitter" style="color:white;"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/africanobyamugisha/">
-                                    <i class="fa-brands fa-linkedin-in" style="color:white;"></i>
-                                </a>
-                                <a href="https://github.com/africanobyamugisha">
-                                    <i class="fa-brands fa-github" style="color:white;"></i>
-                                </a>
-                            </div>
+                </div>
+                <div class="col-lg-6 col-12 photo-col">
+                    <div class="photo-wrapper">
+                        <img src="/assets/img/common/africano_photo.jpg" alt="Africano Byamugisha">
+
+                        <div class="floating-badge badge-1">
+                            <span class="badge-icon badge-teal"><i class="fa-solid fa-chart-line"></i></span>
+                            Data Analytics
+                        </div>
+                        <div class="floating-badge badge-2">
+                            <span class="badge-icon badge-purple"><i class="fa-solid fa-database"></i></span>
+                            MEL Systems
+                        </div>
+                        <div class="floating-badge badge-3">
+                            <span class="badge-icon badge-amber"><i class="fa-solid fa-brain"></i></span>
+                            AI & Data Science
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </header>
-
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <div class="row hero-row align-items-center">
-                    <div class="col-lg-6 col-12">
-                        <h1 class="hero-heading">
-                            Africano <span class="accent">Byamugisha</span>
-                        </h1>
-                        <p class="hero-desc">
-                            Data Analytics & Business Process Optimization Expert with expertise in
-                            Data Operations, Monitoring, Evaluation & Learning (MEL) real-time systems,
-                            MIS, Commercial Analytics, Market Research, and Statistical Computing.
-                            Passionate about leveraging data analytics & technology for inclusion and sustainable impact.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="https://www.linkedin.com/in/africanobyamugisha/"
-                               class="btn-hero btn-filled" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-                            </a>
-                            <a href="https://twitter.com/africano1012"
-                               class="btn-hero btn-outline" target="_blank" rel="noopener">
-                                <i class="fa-brands fa-x-twitter"></i> X / Twitter
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 photo-col">
-                        <div class="photo-wrapper">
-                            <img src="/assets/img/common/africano_photo.jpg" alt="Africano Byamugisha" class="img-fluid">
-
-                            <div class="floating-badge badge-1">
-                                <span class="badge-icon badge-teal"><i class="fa-solid fa-chart-line"></i></span>
-                                Data Analytics
-                            </div>
-                            <div class="floating-badge badge-2">
-                                <span class="badge-icon badge-purple"><i class="fa-solid fa-database"></i></span>
-                                MEL Systems
-                            </div>
-                            <div class="floating-badge badge-3">
-                                <span class="badge-icon badge-amber"><i class="fa-solid fa-brain"></i></span>
-                                AI & Data Science
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script src="/assets/js/jquery.js"></script>
-    <script src="/assets/js/waypoints.js"></script>
-    <script src="/assets/js/bootstrap-bundle.js"></script>
-    <script src="/assets/js/meanmenu.js"></script>
-    <script src="/assets/js/swiper-bundle.js"></script>
-    <script src="/assets/js/magnific-popup.js"></script>
-    <script src="/assets/js/backtotop.js"></script>
-    <script src="/assets/js/counterup.js"></script>
-    <script src="/assets/js/wow.js"></script>
-    <script src="/assets/js/ajax-form.js"></script>
-    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>
