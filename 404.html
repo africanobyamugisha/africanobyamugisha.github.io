@@ -26,6 +26,46 @@
     <link rel="stylesheet" href="/assets/css/spacing.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <style>
+        /* Centered layout overrides */
+        .profile-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .profile-wrapper .slider-title {
+            font-size: 2.8rem;
+        }
+        .profile-wrapper .description,
+        .profile-wrapper p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        .profile-wrapper .inner-btn {
+            justify-content: center;
+        }
+        .svg-backdrop {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            max-width: 750px;
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .profile-content {
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 768px) {
+            .profile-wrapper .slider-title { font-size: 2rem; }
+            .profile-wrapper .description,
+            .profile-wrapper p { font-size: 1.05rem; }
+            .svg-backdrop { width: 130%; }
+        }
+
         /* SVG animations */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -87,7 +127,7 @@
                                 <span class="theme-color"><i class="fa-solid fa-envelope"></i></span>
                                 <span>
                                     <a style="color: white;"
-                                        href="mailto:chat@africanobyamugisha.dev">chat@africanobyamugisha.dev</a>
+                                        href="mailto:byamugishafricano@gmail.com">byamugishafricano@gmail.com</a>
                                 </span>
                             </div>
                             <div class="item">
@@ -124,151 +164,111 @@
 
     <main>
         <section style="padding-top:30px; padding-bottom: 30px;" class="error-section hero-slider one"
-            data-background="/assets/img/bg-image/03_bg-image.png">
+>
             <div class="container slide-bg swiper swiper-container swiper-container-fade">
                 <div class="row">
                     <div class="col-12">
                         <div class="auto-container">
-                            <div class="row ">
-                                <div class="col-xl-6 col-12">
-                                    <div class="slider-content-inner-right">
+                            <div class="profile-wrapper">
+                                <!-- SVG background overlay -->
+                                <svg class="svg-backdrop" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <defs>
+                                        <radialGradient id="bgGlow" cx="50%" cy="45%" r="50%">
+                                            <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.12"/>
+                                            <stop offset="70%" stop-color="#14b8a6" stop-opacity="0.02"/>
+                                            <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
+                                        </radialGradient>
+                                        <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#14b8a6"/>
+                                            <stop offset="100%" stop-color="#0d9488"/>
+                                        </linearGradient>
+                                        <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#f59e0b"/>
+                                            <stop offset="100%" stop-color="#d97706"/>
+                                        </linearGradient>
+                                        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.5"/>
+                                            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
+                                        </linearGradient>
+                                        <filter id="glow">
+                                            <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                                            <feMerge>
+                                                <feMergeNode in="coloredBlur"/>
+                                                <feMergeNode in="SourceGraphic"/>
+                                            </feMerge>
+                                        </filter>
+                                    </defs>
+                                    <circle cx="250" cy="180" r="200" fill="url(#bgGlow)"/>
+                                    <g opacity="0.3" stroke="#14b8a6" stroke-linecap="round">
+                                        <line x1="250" y1="170" x2="120" y2="100" stroke-width="1"/>
+                                        <line x1="250" y1="170" x2="380" y2="90" stroke-width="1"/>
+                                        <line x1="250" y1="170" x2="95" y2="250" stroke-width="1"/>
+                                        <line x1="250" y1="170" x2="360" y2="240" stroke-width="1"/>
+                                        <line x1="250" y1="170" x2="180" y2="50" stroke-width="1"/>
+                                        <line x1="120" y1="100" x2="180" y2="50" stroke-width="0.7"/>
+                                        <line x1="380" y1="90" x2="360" y2="240" stroke-width="0.7"/>
+                                        <line x1="95" y1="250" x2="120" y2="100" stroke-width="0.5" stroke-dasharray="4 6"/>
+                                        <line x1="180" y1="50" x2="380" y2="90" stroke-width="0.5" stroke-dasharray="4 6"/>
+                                    </g>
+                                    <path class="trend-line" d="M 40 310 C 100 290, 140 320, 190 300 S 260 240, 310 260 S 380 200, 460 230" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                                    <g>
+                                        <rect class="bar-animate bar-1" x="355" y="290" width="18" height="55" rx="4" fill="#14b8a6" opacity="0.45"/>
+                                        <rect class="bar-animate bar-2" x="381" y="265" width="18" height="80" rx="4" fill="#14b8a6" opacity="0.6"/>
+                                        <rect class="bar-animate bar-3" x="407" y="245" width="18" height="100" rx="4" fill="#14b8a6" opacity="0.75"/>
+                                        <rect class="bar-animate bar-4" x="433" y="275" width="18" height="70" rx="4" fill="url(#amberGrad)" opacity="0.65"/>
+                                    </g>
+                                    <g filter="url(#glow)">
+                                        <g class="node-main"><circle cx="250" cy="170" r="22" fill="url(#tealGrad)" opacity="0.85"/><circle cx="250" cy="170" r="9" fill="#0c1222" opacity="0.6"/><circle cx="250" cy="170" r="4" fill="#14b8a6"/></g>
+                                        <g class="node-1"><circle cx="120" cy="100" r="13" fill="url(#amberGrad)" opacity="0.75"/><circle cx="120" cy="100" r="5" fill="#0c1222" opacity="0.5"/></g>
+                                        <g class="node-2"><circle cx="380" cy="90" r="15" fill="url(#tealGrad)" opacity="0.7"/><circle cx="380" cy="90" r="6" fill="#0c1222" opacity="0.5"/></g>
+                                        <g class="node-3"><circle cx="95" cy="250" r="10" fill="url(#tealGrad)" opacity="0.6"/></g>
+                                        <g class="node-4"><circle cx="360" cy="240" r="16" fill="url(#amberGrad)" opacity="0.55"/><circle cx="360" cy="240" r="6" fill="#0c1222" opacity="0.5"/></g>
+                                        <g class="node-5"><circle cx="180" cy="50" r="9" fill="url(#tealGrad)" opacity="0.8"/></g>
+                                    </g>
+                                    <circle class="dot-pulse" cx="200" cy="305" r="2.5" fill="#14b8a6"/>
+                                    <circle class="dot-pulse-2" cx="430" cy="155" r="2" fill="#f59e0b"/>
+                                    <circle class="dot-pulse-3" cx="65" cy="170" r="2" fill="#14b8a6"/>
+                                    <circle class="dot-pulse" cx="310" cy="45" r="2" fill="#f59e0b"/>
+                                    <circle class="dot-pulse-2" cx="460" cy="310" r="1.5" fill="#14b8a6"/>
+                                    <circle class="dot-pulse-3" cx="155" cy="195" r="1.5" fill="#14b8a6"/>
+                                    <circle class="dot-pulse" cx="300" cy="330" r="2" fill="#f59e0b"/>
+                                    <circle class="dot-pulse-2" cx="50" cy="75" r="1.5" fill="#14b8a6"/>
+                                    <circle cx="250" cy="170" r="36" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15" stroke-dasharray="3 5"/>
+                                    <circle cx="250" cy="170" r="52" fill="none" stroke="#14b8a6" stroke-width="0.3" opacity="0.08" stroke-dasharray="2 8"/>
+                                </svg>
+
+                                <!-- Content on top -->
+                                <div class="profile-content">
+                                    <h2 class="slider-title">Africano
+                                        <span class="theme-color">Byamugisha</span>
+                                    </h2>
+                                    <p class="description">
+                                        Data Analytics & Business Process Optimization Consultant with expertise in
+                                        Data Operations, Monitoring, Evaluation & Learning (MEL) real-time systems,
+                                        Management Information Systems (MIS), Commercial Analytics & Business Process
+                                        Optimization, Market Research, and Statistical Computing.
+                                    </p>
+                                    <p>
+                                        BSc Statistics (Statistical Computing) & MSc Computer Science (Data Science & AI),
+                                        Makerere University. Passionate about leveraging data analytics & technology
+                                        for inclusion and sustainable impact. A versatile team player, excellence driven,
+                                        not just the bare minimum.
+                                    </p>
+                                    <div class="inner-btn" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
                                         <div>
-                                            <h2 class="slider-title">Africano
-                                                <span class="theme-color">Byamugisha</span>
-                                            </h2>
-                                            <p class="description">
-                                                Data Analytics & Business Process Optimization Consultant with expertise in
-                                                Data Operations, Monitoring, Evaluation & Learning (MEL) real-time systems,
-                                                Management Information Systems (MIS), Commercial Analytics & Business Process
-                                                Optimization, Market Research, and Statistical Computing.
-                                            </p>
-                                            <p>
-                                                BSc Statistics (Statistical Computing) & MSc Computer Science (Data Science & AI),
-                                                Makerere University. Passionate about leveraging data analytics & technology
-                                                for inclusion and sustainable impact. A versatile team player, excellence driven,
-                                                not just the bare minimum.
-                                            </p>
-                                            <div class="inner-btn" style="display: flex; gap: 12px; flex-wrap: wrap;">
-                                                <div>
-                                                    <a class="default-btn"
-                                                        href="https://www.linkedin.com/in/africanobyamugisha/"
-                                                        target="_blank" rel="noopener">
-                                                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-                                                    </a>
-                                                </div>
-                                                <div>
-                                                    <a class="default-btn"
-                                                        href="https://twitter.com/africano1012"
-                                                        target="_blank" rel="noopener"
-                                                        style="background-color: #000;">
-                                                        <i class="fa-brands fa-x-twitter"></i> X / Twitter
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <a class="default-btn"
+                                                href="https://www.linkedin.com/in/africanobyamugisha/"
+                                                target="_blank" rel="noopener">
+                                                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-12">
-                                    <div class="slider-content-inner">
-                                        <div class="img-file" style="display:flex; justify-content:center; align-items:center;">
-                                            <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" style="width:80%;" aria-label="Data analytics illustration">
-                                                <defs>
-                                                    <radialGradient id="bgGlow" cx="50%" cy="45%" r="50%">
-                                                        <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.12"/>
-                                                        <stop offset="70%" stop-color="#14b8a6" stop-opacity="0.02"/>
-                                                        <stop offset="100%" stop-color="#14b8a6" stop-opacity="0"/>
-                                                    </radialGradient>
-                                                    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                        <stop offset="0%" stop-color="#14b8a6"/>
-                                                        <stop offset="100%" stop-color="#0d9488"/>
-                                                    </linearGradient>
-                                                    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                        <stop offset="0%" stop-color="#f59e0b"/>
-                                                        <stop offset="100%" stop-color="#d97706"/>
-                                                    </linearGradient>
-                                                    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                        <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.5"/>
-                                                        <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
-                                                    </linearGradient>
-                                                    <filter id="glow">
-                                                        <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
-                                                        <feMerge>
-                                                            <feMergeNode in="coloredBlur"/>
-                                                            <feMergeNode in="SourceGraphic"/>
-                                                        </feMerge>
-                                                    </filter>
-                                                </defs>
-
-                                                <!-- Ambient glow -->
-                                                <circle cx="250" cy="180" r="200" fill="url(#bgGlow)"/>
-
-                                                <!-- Network connection lines -->
-                                                <g opacity="0.3" stroke="#14b8a6" stroke-linecap="round">
-                                                    <line x1="250" y1="170" x2="120" y2="100" stroke-width="1"/>
-                                                    <line x1="250" y1="170" x2="380" y2="90" stroke-width="1"/>
-                                                    <line x1="250" y1="170" x2="95" y2="250" stroke-width="1"/>
-                                                    <line x1="250" y1="170" x2="360" y2="240" stroke-width="1"/>
-                                                    <line x1="250" y1="170" x2="180" y2="50" stroke-width="1"/>
-                                                    <line x1="120" y1="100" x2="180" y2="50" stroke-width="0.7"/>
-                                                    <line x1="380" y1="90" x2="360" y2="240" stroke-width="0.7"/>
-                                                    <line x1="95" y1="250" x2="120" y2="100" stroke-width="0.5" stroke-dasharray="4 6"/>
-                                                    <line x1="180" y1="50" x2="380" y2="90" stroke-width="0.5" stroke-dasharray="4 6"/>
-                                                </g>
-
-                                                <!-- Flowing trend line -->
-                                                <path class="trend-line"
-                                                    d="M 40 310 C 100 290, 140 320, 190 300 S 260 240, 310 260 S 380 200, 460 230"
-                                                    fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
-
-                                                <!-- Bar chart -->
-                                                <g>
-                                                    <rect class="bar-animate bar-1" x="355" y="290" width="18" height="55" rx="4" fill="#14b8a6" opacity="0.45"/>
-                                                    <rect class="bar-animate bar-2" x="381" y="265" width="18" height="80" rx="4" fill="#14b8a6" opacity="0.6"/>
-                                                    <rect class="bar-animate bar-3" x="407" y="245" width="18" height="100" rx="4" fill="#14b8a6" opacity="0.75"/>
-                                                    <rect class="bar-animate bar-4" x="433" y="275" width="18" height="70" rx="4" fill="url(#amberGrad)" opacity="0.65"/>
-                                                </g>
-
-                                                <!-- Data nodes with glow -->
-                                                <g filter="url(#glow)">
-                                                    <g class="node-main">
-                                                        <circle cx="250" cy="170" r="22" fill="url(#tealGrad)" opacity="0.85"/>
-                                                        <circle cx="250" cy="170" r="9" fill="#0c1222" opacity="0.6"/>
-                                                        <circle cx="250" cy="170" r="4" fill="#14b8a6"/>
-                                                    </g>
-                                                    <g class="node-1">
-                                                        <circle cx="120" cy="100" r="13" fill="url(#amberGrad)" opacity="0.75"/>
-                                                        <circle cx="120" cy="100" r="5" fill="#0c1222" opacity="0.5"/>
-                                                    </g>
-                                                    <g class="node-2">
-                                                        <circle cx="380" cy="90" r="15" fill="url(#tealGrad)" opacity="0.7"/>
-                                                        <circle cx="380" cy="90" r="6" fill="#0c1222" opacity="0.5"/>
-                                                    </g>
-                                                    <g class="node-3">
-                                                        <circle cx="95" cy="250" r="10" fill="url(#tealGrad)" opacity="0.6"/>
-                                                    </g>
-                                                    <g class="node-4">
-                                                        <circle cx="360" cy="240" r="16" fill="url(#amberGrad)" opacity="0.55"/>
-                                                        <circle cx="360" cy="240" r="6" fill="#0c1222" opacity="0.5"/>
-                                                    </g>
-                                                    <g class="node-5">
-                                                        <circle cx="180" cy="50" r="9" fill="url(#tealGrad)" opacity="0.8"/>
-                                                    </g>
-                                                </g>
-
-                                                <!-- Constellation dots -->
-                                                <circle class="dot-pulse" cx="200" cy="305" r="2.5" fill="#14b8a6"/>
-                                                <circle class="dot-pulse-2" cx="430" cy="155" r="2" fill="#f59e0b"/>
-                                                <circle class="dot-pulse-3" cx="65" cy="170" r="2" fill="#14b8a6"/>
-                                                <circle class="dot-pulse" cx="310" cy="45" r="2" fill="#f59e0b"/>
-                                                <circle class="dot-pulse-2" cx="460" cy="310" r="1.5" fill="#14b8a6"/>
-                                                <circle class="dot-pulse-3" cx="155" cy="195" r="1.5" fill="#14b8a6"/>
-                                                <circle class="dot-pulse" cx="300" cy="330" r="2" fill="#f59e0b"/>
-                                                <circle class="dot-pulse-2" cx="50" cy="75" r="1.5" fill="#14b8a6"/>
-
-                                                <!-- Orbital rings -->
-                                                <circle cx="250" cy="170" r="36" fill="none" stroke="#14b8a6" stroke-width="0.5" opacity="0.15" stroke-dasharray="3 5"/>
-                                                <circle cx="250" cy="170" r="52" fill="none" stroke="#14b8a6" stroke-width="0.3" opacity="0.08" stroke-dasharray="2 8"/>
-                                            </svg>
+                                        <div>
+                                            <a class="default-btn"
+                                                href="https://twitter.com/africano1012"
+                                                target="_blank" rel="noopener"
+                                                style="background-color: #000;">
+                                                <i class="fa-brands fa-x-twitter"></i> X / Twitter
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
